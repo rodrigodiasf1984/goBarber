@@ -19,15 +19,15 @@ Abrir o PowerShell como administrator( menu inicar do win => digite PowerShell=>
 
 Executar os comandos no PowerShell
 
-Criar container para o docker postgres base de dados
+Criar container para o docker postgres base de dados: 
   docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres 
 
-Para listar dos containers docker
+Para listar dos containers docker:
   docker ps
   
-Para iniciar o container 
+Para iniciar o container: 
   docker start database
   
-Para verificar os logs do container 
+Para verificar os logs do container:
   docker logs database
   
