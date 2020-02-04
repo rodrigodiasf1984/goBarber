@@ -1,5 +1,5 @@
 # goBarber
-Aplicaçâo para marcação de horários
+Aplicação para marcação de horários
 
 Executar os comandos no Terminal CMD 
 Para instalar as dependências do projeto é necessário abrir o terminal na pasta onde o projeto se encontra ex.: 
