@@ -8,7 +8,7 @@ import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
 import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
-
+import NotificationController from './app/controllers/NotificationController';
 // middlewares
 import authMiddleware from './app/middlewares/auth';
 
@@ -28,5 +28,7 @@ routes.post('/appointments', AppointmentController.store);
 routes.get('/appointments', AppointmentController.index);
 // rota para listar todos os agendamentos do prestador de serviços
 routes.get('/Schedules', ScheduleController.index);
+// rota para lista as notificações
+routes.get('/notifications', NotificationController.index);
 
 export default routes;
