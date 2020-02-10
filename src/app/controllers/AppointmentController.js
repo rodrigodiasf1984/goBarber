@@ -5,6 +5,7 @@ import Appointment from '../models/Appointment';
 import File from '../models/File';
 
 class AppointmentController {
+  // Esses métodos são para o utilizador comum da App, ou seja o cliente
   async index(req, res) {
     // paginação, mostra 20 resultados por página
     const { page = 1 } = req.query; // caso não seja informado o número da página, por padrão será a página 1
