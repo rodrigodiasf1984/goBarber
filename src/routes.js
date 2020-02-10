@@ -23,5 +23,7 @@ routes.post('/files', upload.single('file'), FileController.store);
 routes.get('/providers', ProviderController.index);
 // rota para criar novo agendamento
 routes.post('/appointments', AppointmentController.store);
+// rota par listar todos os agendamento
+routes.get('/appointments', AppointmentController.index);
 
 export default routes;

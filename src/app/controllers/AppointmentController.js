@@ -2,8 +2,34 @@ import * as Yup from 'yup';
 import { startOfHour, parseISO, isBefore } from 'date-fns';
 import User from '../models/User';
 import Appointment from '../models/Appointment';
+import File from '../models/File';
 
 class AppointmentController {
+  async index(req, res) {
+    // retorna a lista de agendamento do utlizador que fez a requisição
+    const listAppointments = await Appointment.findAll({
+      where: { user_id: req.userId, canceled_at: null },
+      order: ['date'],
+      attributes: ['id', 'date'],
+      include: [
+        // include faz o relacionamento entre o agendamento e o utilizador do tipo provider neste caso, por isto usando o as:provider para indicar qual relacionamento desejamos utilizar, os relacionamento se encontram dentro do model appointment
+        {
+          model: User,
+          as: 'provider',
+          attributes: ['id', 'name'], // retorna somente os campos dentro do array attributes
+          include: [
+            {
+              model: File,
+              as: 'avatar', // as: avatar
+              attributes: ['id', 'path', 'url']
+            }
+          ]
+        }
+      ]
+    });
+    return res.json({ listAppointments });
+  }
+
   async store(req, res) {
     // validação usando o YUP
     const schema = Yup.object().shape({
