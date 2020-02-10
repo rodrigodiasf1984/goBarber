@@ -6,11 +6,16 @@ import File from '../models/File';
 
 class AppointmentController {
   async index(req, res) {
+    // paginação, mostra 20 resultados por página
+    const { page = 1 } = req.query; // caso não seja informado o número da página, por padrão será a página 1
+
     // retorna a lista de agendamento do utlizador que fez a requisição
     const listAppointments = await Appointment.findAll({
       where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
       attributes: ['id', 'date'],
+      limit: 20, // lista somente 20 resultados
+      offset: (page - 1) * 20, // serve para determina quantos registos eu quero pular
       include: [
         // include faz o relacionamento entre o agendamento e o utilizador do tipo provider neste caso, por isto usando o as:provider para indicar qual relacionamento desejamos utilizar, os relacionamento se encontram dentro do model appointment
         {
@@ -27,7 +32,7 @@ class AppointmentController {
         }
       ]
     });
-    return res.json({ listAppointments });
+    return res.json(listAppointments);
   }
 
   async store(req, res) {
