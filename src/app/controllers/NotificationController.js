@@ -20,5 +20,20 @@ class NotificationController {
 
     return res.json(notifications);
   }
+
+  async update(req, res) {
+    // const notification = await Notification.findById(req.params.id); sql
+    const notification = await Notification.findByIdAndUpdate(
+      // mongoDb
+      req.params.id,
+      {
+        read: true // actualiza a coluna read para true
+      },
+      {
+        new: true // retorna a notification para o utilizador actualizada com o novo estado
+      }
+    );
+    return res.json(notification);
+  }
 }
 export default new NotificationController();
