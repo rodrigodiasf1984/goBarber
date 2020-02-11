@@ -32,4 +32,6 @@ routes.get('/Schedules', ScheduleController.index);
 routes.get('/notifications', NotificationController.index);
 // rota para marcar um notificação como lida
 routes.put('/notifications/:id', NotificationController.update);
+// rota para cancelar um armazenamento
+routes.delete('/appointments/:id', AppointmentController.delete);
 export default routes;
