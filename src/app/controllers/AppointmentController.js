@@ -5,7 +5,8 @@ import User from '../models/User';
 import Appointment from '../models/Appointment';
 import File from '../models/File';
 import Notification from '../schemas/Notification';
-import Mail from '../../lib/Mail';
+import Queue from '../../lib/Queue';
+import CancellationMail from '../jobs/CancellationMail';
 
 class AppointmentController {
   // Esses métodos são para o utilizador comum da App, ou seja o cliente
@@ -140,19 +141,8 @@ class AppointmentController {
     // caso o pedido de cancelamento do agendamento for feito 2 horas antes atualiza a data de cancelamento para a data e hora atual
     appointment.canceled_at = new Date();
     await appointment.save();
-
-    await Mail.sendMail({
-      to: `${appointment.provider.name} <${appointment.provider.email}>`,
-      suject: 'Agendamento cancelado',
-      // a template do e-email, context são todas as variavéis dentro da template cancellation
-      template: 'cancellation',
-      context: {
-        provider: appointment.provider.name,
-        user: appointment.user.name,
-        date: format(appointment.date, "'dia' dd 'de' MMMM', às' H:mm'h'", {
-          locale: pt
-        })
-      }
+    await Queue.add(CancellationMail.key, {
+      appointment
     });
     return res.json(appointment);
   }
