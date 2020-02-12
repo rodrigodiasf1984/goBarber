@@ -34,8 +34,14 @@ class Queue {
       // busca as informações da fila relacionado com o job
       const { bee, handle } = this.queues[job.key];
       // pega a fila e processo o handle= neste caso envia o e-mail de cancelamento
-      bee.process(handle);
+      // o on() fica escutando o event
+      bee.on('failed', this.handleFailure).process(handle);
     });
+  }
+
+  handleFailure(job, err) {
+    // caso tenha algum erro ao executar a fila
+    console.log(`Queue ${job.queue.name}: FAILED`, err);
   }
 }
 
