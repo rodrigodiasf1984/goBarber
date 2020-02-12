@@ -18,7 +18,7 @@ class AppointmentController {
     const listAppointments = await Appointment.findAll({
       where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
-      attributes: ['id', 'date'],
+      attributes: ['id', 'date', 'past', 'cancelable'],
       limit: 20, // lista somente 20 resultados
       offset: (page - 1) * 20, // serve para determina quantos registos eu quero pular
       include: [
