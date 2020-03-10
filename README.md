@@ -1,33 +1,37 @@
-# goBarber
-Aplicação para marcação de horários
 
-Executar os comandos no Terminal CMD 
-Para instalar as dependências do projeto é necessário abrir o terminal na pasta onde o projeto se encontra ex.: 
-  C:\users\rodri\Desktop\goBarber> yarn
-  
-Para rodar o projeto: 
-  C:\users\rodri\Desktop\goBarber> yarn dev
+## :rocket: Sobre o desafio
 
-Para testar as rotas usar o insomnia ou postman 
+Criar uma api para marcação de horários com **Node.js**.
 
-*Docker 
-Abrir o site https://www.docker.com/products/docker-desktop
+## :clipboard: Iniciando a aplicação
 
-Efetuar o download do docker desktop e instalar, após instalação, abrir o programa para inicializar o "docker desktop"
+1. Clone o repositório com `git clone https://github.com/rodrigodiasf1984/goBarber.git`
+2. Instalar o Docker https://www.docker.com/products/docker-desktop 
+2. Entre dentro da pasta do projeto com `cd Desafio06`
+3. Abrir o PowerShell como administrator( menu inicar do win => digite PowerShell=> Run as Administrator
+4. Criar container para o docker postgres base de dados: 
+5. `docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres`
+5. Para listar dos containers docker:
+6.`docker ps`
+7.Para iniciar o container: 
+8.`docker start database`
+6. Scannear o Qrcode com  a camera do telefone e clicar no icone para abrir com Expo
 
-Abrir o PowerShell como administrator( menu inicar do win => digite PowerShell=> Run as Administrator 
+## :hammer: Ferramentas usadas
 
-Executar os comandos no PowerShell
+- 📄 **Node-js** 
+- 📄 **Express** 
+- 📄 **Sucrase** 
+- 📄 **Docker** 
+- 📄 **Sequelize** 
+- 📄 **PostgreSQL** 
+- 📄 **node-postgres** 
+- 📄 **JWT** 
+- 📄 **Bcrypt** 
+- 📄 **Yup** 
+- 📄 **Vscode**
+- 📄 **ESlint** 
 
-Criar container para o docker postgres base de dados: 
-  docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres 
 
-Para listar dos containers docker:
-  docker ps
-  
-Para iniciar o container: 
-  docker start database
-  
-Para verificar os logs do container:
-  docker logs database
-  
+
+
