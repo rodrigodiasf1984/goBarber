@@ -21,7 +21,7 @@ Criar uma api**REST** com **Node.js ** para agendamento de barbearia, a mesma pe
 14. `yarn sequelize db:migrate`
 15. Para excutar a api execute o comando a seguir no terminal:
 16. `yarn start`ou `yarn dev` caso esteja em modo desenvolvimento
-17. Para testar use a aplicaçã seguinte:
+17. Para testar use a aplicação seguinte:
 18. **https://insomnia.rest/**
 
 ## :hammer: Ferramentas usadas
