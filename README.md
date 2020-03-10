@@ -19,7 +19,7 @@ Criar uma api para marcação de horários com **Node.js**.
 
 ## :hammer: Ferramentas usadas
 
-- 📄 **Node-js** 
+- 📄 **Node-js** <a href="https://nodejs.org/en/" rel="nofollow">Node.js</a>
 - 📄 **Express** 
 - 📄 **Sucrase** 
 - 📄 **Docker** 
