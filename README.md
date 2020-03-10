@@ -20,17 +20,18 @@ Criar uma api para marcação de horários com **Node.js**.
 ## :hammer: Ferramentas usadas
 
 - 📄 **<a href="https://nodejs.org/en/" rel="nofollow">Node.js</a>**
-- 📄 **Express** 
-- 📄 **Sucrase** 
-- 📄 **Docker** 
-- 📄 **Sequelize** 
-- 📄 **PostgreSQL** 
-- 📄 **node-postgres** 
-- 📄 **JWT** 
-- 📄 **Bcrypt** 
-- 📄 **Yup** 
-- 📄 **Vscode**
-- 📄 **ESlint** 
+- 📄 **<a href="https://expressjs.com/" rel="nofollow">Express</a>** 
+- 📄 **<a href="https://nodemon.io/" rel="nofollow">nodemon</a>** 
+- 📄 **<a href="https://github.com/alangpierce/sucrase">Sucrase</a>** 
+- 📄 **<a href="https://www.docker.com/docker-community" rel="nofollow">Docker</a>** 
+- 📄 **<a href="http://docs.sequelizejs.com/" rel="nofollow">Sequelize</a>** 
+- 📄 **<a href="https://www.postgresql.org/" rel="nofollow">PostgreSQL</a>** 
+- 📄 **<a href="https://www.npmjs.com/package/pg" rel="nofollow">node-postgres</a>** 
+- 📄 **<a href="https://jwt.io/" rel="nofollow">JWT</a>** 
+- 📄 **<a href="https://www.npmjs.com/package/bcrypt" rel="nofollow">Bcrypt</a>** 
+- 📄 **<a href="https://www.npmjs.com/package/yup" rel="nofollow">Yup</a>** 
+- 📄 **<a href="https://code.visualstudio.com/" rel="nofollow">VS Code</a>**
+- 📄 **<a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" rel="nofollow">ESLint</a>** 
 
 
 
