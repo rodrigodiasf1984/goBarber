@@ -1,7 +1,7 @@
 
 ## :rocket: Sobre o desafio
 
-Criar uma api para marcação de horários com **Node.js**.
+Criar uma api**REST** com **Node.js ** para agendamento de barbearia, a mesma permite aos usuários agendar uma consulta com seu barbeiro favorito e mostra ao barbeiro sua agenda comm os agendamentos para o dia.
 
 ## :clipboard: Iniciando a aplicação
 
