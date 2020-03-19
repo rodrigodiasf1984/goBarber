@@ -10,19 +10,20 @@ Criar uma api **REST** com **Node.js ** para agendamento de barbearia, a mesma p
 3. Abrir o PowerShell como administrator( menu inicar do win => digite PowerShell=> Run as Administrator
 4. Criar container para o docker postgres base de dados: 
 5. `docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres`
-6. Para listar dos containers docker:
-7. `docker ps`
-8. Para iniciar o container: 
-9. `docker start database`
-10. No terminal entre dentro da pasta onde o projeto foi salvo com `cd goBarber`
-11. Instalar as dependências do projeto exceute o comando a seguir no terminal:
-12. `yarn`
-13. Executar as migrations para criar a base de dados:
-14. `yarn sequelize db:migrate`
-15. Para excutar a api execute o comando a seguir no terminal:
-16. `yarn start`ou `yarn dev` caso esteja em modo desenvolvimento
-17. Para testar use a aplicação seguinte:
-18. **https://insomnia.rest/**
+6. `docker run --name redisbarber -p 6379:6379 -d -t redis:alpine` 
+7. Para listar dos containers docker:
+8. `docker ps`
+9. Para iniciar o container: 
+10. `docker start database`
+11. No terminal entre dentro da pasta onde o projeto foi salvo com `cd goBarber`
+12. Instalar as dependências do projeto exceute o comando a seguir no terminal:
+13. `yarn`
+14. Executar as migrations para criar a base de dados:
+15. `yarn sequelize db:migrate`
+16. Para excutar a api execute o comando a seguir no terminal:
+17. `yarn start`ou `yarn dev` caso esteja em modo desenvolvimento
+18. Para testar use a aplicação seguinte:
+19. **https://insomnia.rest/**
 
 ## :hammer: Ferramentas usadas
 
