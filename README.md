@@ -13,8 +13,8 @@ Criar uma api **REST** com **Node.js ** para agendamento de barbearia, a mesma p
 6. `docker run --name redisbarber -p 6379:6379 -d -t redis:alpine` 
 7. Para listar dos containers docker:
 8. `docker ps`
-9. Para iniciar o container: 
-10. `docker start database`
+9. Para iniciar os containers: 
+10. `docker start database` e `docker start redisbarber`
 11. No terminal entre dentro da pasta onde o projeto foi salvo com `cd goBarber`
 12. Instalar as dependências do projeto exceute o comando a seguir no terminal:
 13. `yarn`
