@@ -18,12 +18,13 @@ Criar uma api **REST** com **Node.js ** para agendamento de barbearia, a mesma p
 11. No terminal entre dentro da pasta onde o projeto foi salvo com `cd goBarber`
 12. Instalar as dependências do projeto exceute o comando a seguir no terminal:
 13. `yarn`
-14. Executar as migrations para criar a base de dados:
-15. `yarn sequelize db:migrate`
-16. Para excutar a api execute o comando a seguir no terminal:
-17. `yarn start`ou `yarn dev` caso esteja em modo desenvolvimento
-18. Para testar use a aplicação seguinte:
-19. **https://insomnia.rest/**
+14. Criar a base de dados gobarber no postbird 
+15. Executar as migrations para criar a base de dados:
+16. `yarn sequelize db:migrate`
+17. Para excutar a api execute o comando a seguir no terminal:
+18. `yarn start`ou `yarn dev` caso esteja em modo desenvolvimento
+19. Para testar use a aplicação seguinte:
+20. **https://insomnia.rest/**
 
 ## :hammer: Ferramentas usadas
 
