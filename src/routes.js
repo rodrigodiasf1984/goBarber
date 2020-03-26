@@ -30,7 +30,7 @@ routes.post('/appointments', AppointmentController.store);
 // rota par listar todos os agendamentos do cliente
 routes.get('/appointments', AppointmentController.index);
 // rota para listar todos os agendamentos do prestador de serviços
-routes.get('/Schedules', ScheduleController.index);
+routes.get('/schedules', ScheduleController.index);
 // rota para lista as notificações
 routes.get('/notifications', NotificationController.index);
 // rota para marcar um notificação como lida

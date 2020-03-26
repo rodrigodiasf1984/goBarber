@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 import User from '../models/User';
+import File from '../models/File';
 
 class UserController {
   async store(req, res) {
@@ -58,11 +59,13 @@ class UserController {
     }
     const { email, oldPassword } = req.body;
     const user = await User.findByPk(req.userId);
+
     if (email && email !== user.email) {
       // verifica se o utilizador quer alterar o email, se sim a primeira variável do if será válida e a segunda condição(verificar se o email da bd e o da req são diferentes) também
       const userExists = await User.findOne({
         where: { email }
       });
+
       if (userExists) {
         return res.status(400).json({ error: 'Este utilizador já existe!' });
       }
@@ -73,12 +76,23 @@ class UserController {
       return res.status(401).json({ error: 'Senha inválida' });
     }
 
-    const { id, name, provider } = await user.update(req.body);
+    await user.update(req.body);
+
+    const { id, name, avatar } = await User.findByPk(req.userId, {
+      include: [
+        {
+          model: File,
+          as: 'avatar',
+          attributes: ['id', 'path', 'url']
+        }
+      ]
+    });
+
     return res.json({
       id,
       name,
       email,
-      provider
+      avatar
     });
   }
 }

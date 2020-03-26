@@ -24,6 +24,13 @@ class ScheduleController {
           // fim do dia 23:59:59
         }
       },
+      include: [
+        {
+          model: User,
+          as: 'user',
+          attributes: ['name']
+        }
+      ],
       order: ['date']
     });
     return res.json(appointments);
